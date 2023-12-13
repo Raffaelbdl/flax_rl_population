@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flax_rl_population"
+requires-python = ">=3.10"
+description = "An extension to FLAX_RL for population training"
+authors = [
+    {name = "Raffael Bolla Di Lorenzo", email = "raffaelbdl@gmail.com"}
+]
+dependencies = [
+    "flax_rl@git+https://github.com/Raffaelbdl/flax_rl"
+]
+dynamic = ["version", "readme"]
+
+[project.urls]
+homepage = "https://github.com/Raffaelbdl/flax_rl"
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/markdown"}
+version = {attr = "rl.version.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["rl_population*"]
