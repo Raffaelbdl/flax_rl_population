@@ -163,3 +163,4 @@ legacy/
 results/
 *Callback/
 wandb/
+evals/
